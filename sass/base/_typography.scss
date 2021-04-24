@@ -3,7 +3,6 @@ body {
   font-weight: 400;
   font-size: $default-font-size;
   line-height: 1.7;
-  padding: 3rem;
   color: $color-grey-dark;
 }
 
@@ -19,6 +18,11 @@ body {
     letter-spacing: 3.5rem;
     font-weight: 400;
     animation: moveInLeft 1s ease-out;
+
+    @include respond(phone) {
+      font-size: 5rem;
+      letter-spacing: 1rem;
+    }
   }
 
   &--sub {
@@ -28,6 +32,10 @@ body {
     font-weight: 400;
     animation: moveInRight 1s ease-out;
     margin-bottom: 6rem;
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
   }
 }
 
@@ -42,6 +50,14 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all .2s;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
