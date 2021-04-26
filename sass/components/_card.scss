@@ -28,9 +28,11 @@
       &-1 {
         background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
       }
+
       &-2 {
         background-image: linear-gradient(to right bottom, $color-green-light, $color-green-dark);
       }
+
       &-3 {
         background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
       }
@@ -90,11 +92,13 @@
               rgba($color-secondary-light, .85),
               rgba($color-secondary-dark, .85));
     }
+
     &--2 {
       background-image: linear-gradient(to right bottom,
               rgba($color-green-light, .85),
               rgba($color-green-dark, .85));
     }
+
     &--3 {
       background-image: linear-gradient(to right bottom,
               rgba($color-tertiary-light, .85),
@@ -149,7 +153,8 @@
     font-weight: 100;
   }
 
-  @include respond(tab-port) {
+  @media only screen and (max-width: 56.25em),
+  only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
